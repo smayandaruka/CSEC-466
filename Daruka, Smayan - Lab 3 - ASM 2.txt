@@ -1,0 +1,66 @@
+Daruka, Smayan - ASM2 - Lab 2
+
+Submit a single text file with your ASM code and explanations.
+
+Come up with your own original examples to illustrate
+the following flags. You must explain in your own words, 
+as well, what you did and why it turned on the flags.
+
+1) Zero Flag
+
+mov eax, 52; move 52 into eax
+add eax, -52; add -52 to eax and the result is 0 which in turn turns the zero flag on
+
+2) Sign Flag
+
+mov eax, 52; move 52 into eax
+add eax, -54; add -54 to eax and the result is -2 which in turn turns the sign flag on since the result is a signed number
+
+3) Carry Flag
+
+mov al, 922; move 922 into al
+mov ah, 7; move 7 into ah
+imul ah; multiply (with signs) al and ah and store the result in ax and this sets the carry flag on since the result is too big to be stored in ax
+
+4) Overflow Flag
+
+mov al, -922; move -922 into al
+mov ah, 7; move 7 into ah
+imul ah; multiply (with signs) al and ah and store the result in ax and this sets the overflow flag since the result is a signed number and too big to be stored in ax
+
+Come up with your own original examples and explanation
+for practical usages of the following instructions.
+
+5) AND
+6) OR
+7) NOT
+8) TEST
+9) CMP
+
+Perform multiplication and division without using mul, div, 
+imul, or idiv for the following expressions.
+
+10) 10*7
+
+mov eax, 10; move 10 into eax
+shl eax, 3; shift left 3 bits (essentially multiply by 2^3 or 8) which results in 80
+sub eax, 10; subtract 10 from eax to get the actual result of 10*7 which is 70
+
+11) -50*4
+
+mov eax, -50; move -50 into eax
+shl eax, 2; shift left 2 bits (essentially multiply by 2^2 or 4) which results in -200
+
+12) 8/8
+
+mov eax, 8; move 8 into eax
+shr eax, 3; shift right 3 bits (essentially divides by 2^3 or 8) which results in 1
+
+13) -21/10
+
+mov eax, -21; move -21 into eax
+sar eax, 4; shift right 4 bits which essentially stores the quotient of -21/10 or -2 in eax
+
+Use the following 2 ASM instructions in a creative example.
+14) INC
+15) DEC

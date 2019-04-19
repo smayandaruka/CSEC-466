@@ -1,0 +1,66 @@
+Daruka, Smayan - ASM1 - Lab 1
+
+Submit a single text file with your ASM code and explanations.
+
+1) 52+86
+
+mov eax, 52; move 52 into eax
+add eax, 86; add 86 and store the result in eax
+
+2) 86-52
+
+mov eax, 86; move 86 into eax
+sub eax, 52; subtract 52 and store the result in eax
+
+3) 9*7
+
+mov al, 9; move 9 into al
+mov ah, 7; move 7 into ah
+mul ah; multiply al and ah and store the result in ax
+
+4) -9 * 7
+
+mov al, -9; move -9 into al
+mov ah, 7; move 7 into ah
+imul ah; multiply (with signs) al and ah and store the result in ax
+
+5) 8/4*2
+
+mov eax, 8; move 8 into eax
+mov ecx, 4; move 4 into ecx
+div ecx; divide edx:eax by ecx and store the quotient in eax and the remainder in edx
+mov edx, 2; move 2 into edx
+mul edx; multiply edx and eax and store the product in edx:eax
+
+6) -8/4*2
+
+mov eax, -8; move -8 into eax
+mov ecx, 4; move 4 into ecx
+idiv ecx; divide (with signs) edx:eax by ecx and store the quotient in eax and the remainder in edx
+mov edx, 2; move 2 into edx
+imul edx; multiply (with signs) edx and eax and store the product in edx:eax
+
+7) Start with -21, sign extend it into a register
+
+mov bl, -21; move -21 into bl
+movsx ax, bl; sign extend bl to ax
+
+8) Start with 21, sign extend it into a register
+
+mov eax, 0xffffffff; move all 1s into eax
+mov bl, 21; move 21 into bl
+movsx ax, bl; sign extend bl to ax
+
+9) Start with -88, zero extend it into a register
+
+mov eax, 0xffffffff; move all 1s into eax
+mov ebx, 0xffffffff; move all 1s into ebx
+mov bl, -88; move -88 into bl
+movzx ax, bl; zero extend bl to ax
+
+10) Start with 88, zero extend it into a register
+
+mov eax, 0xffffffff; move all 1s into eax
+mov ebx, 0xffffffff; move all 1s into ebx
+mov bl, 88; move 88 into bl
+movzx ax, bl; zero extend bl to ax
