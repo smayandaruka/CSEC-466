@@ -1,2 +1,2 @@
 # CSEC-466
-CSEC-466: Introduction to Malware
+Assignments for the Introduction to Malware class at RIT
